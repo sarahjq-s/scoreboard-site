@@ -4,7 +4,7 @@ A project I'm building at Scrimba using HTML, CSS, and Javascript
 
 Site in progress...
 
-Live preview:
+Live preview: https://comforting-cascaron-7096a7.netlify.app/
 
 ----------------
 ## About Scrimba
