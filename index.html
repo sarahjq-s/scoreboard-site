@@ -1,0 +1,39 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <header>
+            <h1>APP IN PROGRESS</h1>
+        </header>
+        <div class="container">
+            <div id="home-container">
+                <h3>HOME</h3>
+                <h4 id="home-score-el">0</h4>
+                <div>
+                    <button onclick="homeOnePoint()" id="home-score-one">+1</button>
+                    <button onclick="homeThreePoint()" id="home-score-three">+3</button>
+                    <button onclick="homeFivePoint()" id="home-score-five">+5</button>
+                </div>
+            </div>
+            
+            <div id="guest-container">
+                <h3>GUEST</h3>
+                <h4 id="guest-score-el">0</h4>
+                <div>
+                    <button onclick="guestOnePoint()" id="guest-score-one">+1</button>
+                    <button onclick="guestThreePoint()" id="guest-score-three">+3</button>
+                    <button onclick="guestFivePoint()" id="guest-score-five">+5</button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="container">
+            <button onclick="newGame()" id="new-game">NEW GAME</button>
+        </div>
+        
+        <p id="footer">Want to create your own Scoreboard site? Take <a href="https://scrimba.com/learn/htmlandcss" target="_blank">this HTML & CSS course</a> and <a href="https://scrimba.com/learn/learnjavascript" target="_blank"> Javascript.</a></p>
+        <script src="index.js"></script>
+    </body>
+   
+</html>
