@@ -41,3 +41,22 @@ function newGame(){
     guestScore.textContent = guestPoint  
     
 }
+
+/**LEADER **/
+let leadHome = document.getElementById("home-container")
+let leadGuest = document.getElementById("home-container")
+
+
+    if(homePoint > 1){
+        let homePoint = 0
+        let guestPoint = 0
+        leadHome.style.backgroundColor = "#F59E0B";
+    // }else if (homePoint < guestPoint ){
+    //     leadGuest.style.backgroundColor = "#F59E0B";
+    // }else if(homePoint === guestPoint){
+    //     leadHome.style.backgroundColor = "#F59E0B";
+    //     leadGuest.style.backgroundColor = "#F59E0B";
+    }
+
+
+    // if homePoint is greater than guestPoint
