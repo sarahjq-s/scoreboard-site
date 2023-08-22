@@ -8,14 +8,17 @@ let guestPoint = 0
 function homeOnePoint(){
     homePoint += 1
     homeScore.textContent = homePoint
+    lead()
 }
 function homeThreePoint(){
     homePoint += 3
     homeScore.textContent = homePoint
+    lead()
 }
 function homeFivePoint(){
     homePoint += 5
     homeScore.textContent = homePoint
+    lead()   
 }
 
 
@@ -23,14 +26,41 @@ function homeFivePoint(){
 function guestOnePoint(){
     guestPoint += 1
     guestScore.textContent = guestPoint
+    lead()
 }
 function guestThreePoint(){
     guestPoint += 3
     guestScore.textContent = guestPoint    
+    lead()
 }
 function guestFivePoint(){
     guestPoint += 5
     guestScore.textContent = guestPoint
+    lead()
+}
+
+/**LEADER **/
+let leadHome = document.getElementById("home-container")
+let leadGuest = document.getElementById("guest-container")
+
+let leadColor = "#F59E0B"
+let bgColor = "D1D5DB"
+
+function lead(){
+    if(homePoint > guestPoint){
+        console.log("Home is leading")  
+        leadHome.style.backgroundColor = leadColor
+        leadGuest.style.backgroundColor = bgColor
+
+    } else if (guestPoint > homePoint){
+        console.log("Guest is leading")  
+        leadGuest.style.backgroundColor = leadColor
+        leadHome.style.backgroundColor = bgColor
+    }else if(homePoint === guestPoint){
+        console.log("Tie")  
+        leadGuest.style.backgroundColor = bgColor
+        leadHome.style.backgroundColor = bgColor    
+    }   
 }
 
 function newGame(){
@@ -39,24 +69,16 @@ function newGame(){
     
     guestPoint = 0
     guestScore.textContent = guestPoint  
-    
+
+    leadGuest.style.backgroundColor = bgColor
+    leadHome.style.backgroundColor = bgColor       
 }
 
-/**LEADER **/
-let leadHome = document.getElementById("home-container")
-let leadGuest = document.getElementById("home-container")
 
 
-    if(homePoint > 1){
-        let homePoint = 0
-        let guestPoint = 0
-        leadHome.style.backgroundColor = "#F59E0B";
-    // }else if (homePoint < guestPoint ){
-    //     leadGuest.style.backgroundColor = "#F59E0B";
-    // }else if(homePoint === guestPoint){
-    //     leadHome.style.backgroundColor = "#F59E0B";
-    //     leadGuest.style.backgroundColor = "#F59E0B";
-    }
 
 
-    // if homePoint is greater than guestPoint
+
+
+
+

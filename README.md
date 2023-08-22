@@ -1,8 +1,7 @@
 # scoreboard-site
 
-A project I'm building at Scrimba using HTML, CSS, and Javascript
+A simple scoreboard built with HTML, CSS, and Javascript. It features highlighting the leading team. Working on additional features...
 
-Site in progress...
 
 Live preview: https://comforting-cascaron-7096a7.netlify.app/
 
