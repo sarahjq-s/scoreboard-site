@@ -3,37 +3,38 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <div class="container">
+        <div>
+            <h1 id="winner"></h1>
+        </div>
+        
+        <div id="score-container">
             <div id="home-container">
-                <h3>HOME</h3>
+                <h3 id="home-el">HOME</h3>
                 <h4 id="home-score-el">0</h4>
                 <div>
                     <button onclick="homeOnePoint()" id="home-score-one">+1</button>
+                    <button onclick="homeTwoPoint()" id="home-score-two">+2</button>
                     <button onclick="homeThreePoint()" id="home-score-three">+3</button>
-                    <button onclick="homeFivePoint()" id="home-score-five">+5</button>
                 </div>
             </div>
             
             <div id="guest-container">
-                <h3>GUEST</h3>
+                <h3 id="guest-el">GUEST</h3>
                 <h4 id="guest-score-el">0</h4>
                 <div>
                     <button onclick="guestOnePoint()" id="guest-score-one">+1</button>
+                    <button onclick="guestTwoPoint()" id="guest-score-two">+2</button>
                     <button onclick="guestThreePoint()" id="guest-score-three">+3</button>
-                    <button onclick="guestFivePoint()" id="guest-score-five">+5</button>
                 </div>
             </div>
             
         </div>
-        <div class="container">
-            <!-- <button id="end-btn" onclick="endGame()" id="new-game">END GAME</button> -->
+        <div id="btn-container">
             <button id="new-btn" onclick="newGame()" id="new-game">NEW GAME</button>
         </div>
-        
         <p id="footer">Want to create your own Scoreboard site? Take <a href="https://scrimba.com/learn/htmlandcss" target="_blank">this HTML & CSS</a> and <a href="https://scrimba.com/learn/learnjavascript" target="_blank"> Javascript</a> courses.</p>
         <script src="index.js"></script>
     </body>
    
 </html>
 
-<!-- WORK ON ADDING QUARTER, FOUL?  -->

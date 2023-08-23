@@ -4,79 +4,95 @@ let guestScore = document.getElementById("guest-score-el")
 let homePoint = 0
 let guestPoint = 0
 
+let winner = document.getElementById("winner")
+
 /*HOME*/
 function homeOnePoint(){
-    homePoint += 1
-    homeScore.textContent = homePoint
+    homePoint += 1;
+    homeScore.textContent = homePoint;
     lead()
+    winningTeam()
 }
-function homeThreePoint(){
-    homePoint += 3
-    homeScore.textContent = homePoint
+function homeTwoPoint(){
+    homePoint += 2;
+    homeScore.textContent = homePoint;
     lead()
-}
-function homeFivePoint(){
-    homePoint += 5
-    homeScore.textContent = homePoint
-    lead()   
+    winningTeam()
 }
 
+function homeThreePoint(){
+    homePoint += 3;
+    homeScore.textContent = homePoint;
+    lead()
+    winningTeam()
+}
 
 /*GUEST*/
 function guestOnePoint(){
-    guestPoint += 1
-    guestScore.textContent = guestPoint
+    guestPoint += 1;
+    guestScore.textContent = guestPoint;
     lead()
+    winningTeam()
+}
+function guestTwoPoint(){
+    guestPoint += 2;
+    guestScore.textContent = guestPoint;  
+    lead()
+    winningTeam()
 }
 function guestThreePoint(){
-    guestPoint += 3
-    guestScore.textContent = guestPoint    
+    guestPoint += 3;
+    guestScore.textContent = guestPoint;
     lead()
-}
-function guestFivePoint(){
-    guestPoint += 5
-    guestScore.textContent = guestPoint
-    lead()
+    winningTeam()
 }
 
 /**LEADER **/
 let leadHome = document.getElementById("home-container")
 let leadGuest = document.getElementById("guest-container")
 
-let leadColor = "#F59E0B"
-let bgColor = "D1D5DB"
+let leadColor = "ff9f1c"
+let bgColor = "black"
+
+let homeColor = document.getElementById("home-el")
+let guestColor = document.getElementById("guest-el")
 
 function lead(){
     if(homePoint > guestPoint){
-        console.log("Home is leading")  
-        leadHome.style.backgroundColor = leadColor
-        leadGuest.style.backgroundColor = bgColor
-
+        homeColor.style.color = leadColor;
+        guestColor.style.color = bgColor;
     } else if (guestPoint > homePoint){
-        console.log("Guest is leading")  
-        leadGuest.style.backgroundColor = leadColor
-        leadHome.style.backgroundColor = bgColor
+        guestColor.style.color = leadColor;
+        homeColor.style.color = bgColor;
     }else if(homePoint === guestPoint){
-        console.log("Tie")  
-        leadGuest.style.backgroundColor = bgColor
-        leadHome.style.backgroundColor = bgColor    
+        guestColor.style.color = bgColor;
+        homeColor.style.color = bgColor; 
     }   
 }
 
 function newGame(){
-    homePoint = 0
-    homeScore.textContent = homePoint
+    homePoint = 0;
+    homeScore.textContent = homePoint;
     
-    guestPoint = 0
-    guestScore.textContent = guestPoint  
+    guestPoint = 0;
+    guestScore.textContent = guestPoint;
 
-    leadGuest.style.backgroundColor = bgColor
-    leadHome.style.backgroundColor = bgColor       
+    guestColor.style.color = bgColor;
+    homeColor.style.color = bgColor;
+    
+    winner.textContent = " ";
 }
 
 
+/**WINNER**/
 
-
+function winningTeam(){
+    if(homePoint >= 15){
+        winner.textContent = "HOME WINS!"
+    }else if (guestPoint >= 15){
+        winner.textContent = "GUEST WINS!"
+}
+}
 
 
 
